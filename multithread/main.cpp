@@ -1,6 +1,6 @@
 // Programming Assignment #2
 // Author: Stephan Edmonson
-// Role: created and implemented pidManager.h library
+// Role: created and implemented pidManager and main
 // Problem : We must now have the pid manager run multiple threads concurrently.
 // Issues that I had: not knowing I needed to add the -pthread option when attempting to compile
 
@@ -16,26 +16,6 @@
 #include <vector>
 
 #define THREAD_COUNT 100
-
-//create function that threads will execute
-/**
-	 * void request_sleep_release:
-	 * params: 
-	 * return value: 
-	 **/
-void request_sleep_release()
-{
-	int process = allocate_pid();
-	std::cout << "process number: " << process << " now allocated" << std::endl;
-	/* generate secret number between 1 and 5: */
-	int sec = rand() % 5 + 1;
-	//sleep
-	std::this_thread::sleep_for(std::chrono::seconds(sec));
-	//release
-	release_pid(process);
-	//confirmation
-	std::cout << "process number: " << process << " now released" << std::endl;
-}
 
 int main()
 {
