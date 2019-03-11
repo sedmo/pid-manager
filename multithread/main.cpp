@@ -7,7 +7,7 @@
 // Multithread.cpp
 //REFER TO https://computing.llnl.gov/tutorials/pthreads/#Compiling for compiling (-pthread works for g++)
 
-#include "../singlethread/pidManager.cpp"
+#include "pidManager.cpp"
 #include <iostream>
 #include <thread>
 #include <chrono>   // std::chrono::seconds
