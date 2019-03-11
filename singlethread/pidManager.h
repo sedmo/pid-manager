@@ -17,7 +17,7 @@ std::array<int, MAX_PID - MIN_PID> pid_map;
 int allocate_map();
 
 /**
- * int allocate_map: Allocates and returns a pid;
+ * int allocate_pid: Allocates and returns a pid;
  *
  * params:none
  *
@@ -28,7 +28,7 @@ int allocate_map();
 int allocate_pid();
 
 /**
- * void allocate_map: Creates and initializes a data structure for representing pids;
+ * void release_pid: Creates and initializes a data structure for representing pids;
  *
  * params:none
  *
